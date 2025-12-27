@@ -1,0 +1,30 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Entornos virtuales
+venv/
+.env/
+.venv/
+env/
+ENV/
+*.env
+
+# Archivos de configuración locales
+*.sqlite3
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de VS Code o IDEs
+.vscode/
+.idea/
+
+# Archivos compilados de CSS/JS 
+node_modules/
+*.map
