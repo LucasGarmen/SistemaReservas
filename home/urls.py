@@ -17,6 +17,8 @@ urlpatterns = [
     path('utilities_border', views.utilities_border, name='utilities_border'),
     path('utilities_animation', views.utilities_animation, name='utilities_animation'),
     path('utilities_color', views.utilities_color, name='utilities_color'),
+    path('cargar-reserva/', views.cargar_reserva, name='cargar_reserva'),
+
 
     
 ]

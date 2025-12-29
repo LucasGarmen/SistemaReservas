@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Reserva,Habitacion,Cliente
 
 # Create your views here.
 def index(request):
@@ -42,3 +43,19 @@ def utilities_border(request):
 
 def utilities_animation(request):
     return render(request, 'home/utilities_animation.html')
+
+def cargar_reserva(request):
+    return redirect('crear_reserva')
+
+def dashboard(request):
+    reservas = Reserva.objects.all()
+    habitaciones = Habitacion.objects.all()
+    clientes = Cliente.objects.all()
+    context = {
+        'reservas' : reservas,
+        'habitaciones' : habitaciones,
+        'clientes' : clientes,
+        'total_reservas':reservas.count(),
+        'habitaciones_disponibles':habitaciones.filter(disponible=True).count(),
+    }
+    return render(request,'index.html',context)
